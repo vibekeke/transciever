@@ -1,0 +1,16 @@
+~ this_is_a_node_title
+Tranciever: ...
+Tranciever: ...
+Tranciever: ...
+Someone: Hello?
+- Hello!
+- Hi it's me!
+- ...
+Someone: ..Helloooo?
+Someone: *Click*
+Tranciever: Call ended.
+
+=> END
+
+#Du kan putte if og elif statements som vanlig. Du har direkte tilgang til Globals her.
+#Du kan endre variabler med set variabelnavn = "verdi"

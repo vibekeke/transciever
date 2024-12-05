@@ -1,0 +1,162 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwcuu0xxvrd0b"]
+
+[ext_resource type="Script" path="res://UI/menu_transciever.gd" id="1_ck7d7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkx2u"]
+bg_color = Color(0.578755, 0.863043, 0.997258, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.138462, 0.438026, 0.650262, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ph51u"]
+bg_color = Color(0.131039, 0.486616, 0.573441, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 4
+border_color = Color(0.735702, 0.548504, 0.331411, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kcid2"]
+bg_color = Color(0.0818323, 0.206689, 0.294712, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.158077, 0.434005, 0.500185, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5s6vc"]
+bg_color = Color(0.276196, 0.649681, 0.7987, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.158077, 0.434005, 0.500185, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ah21q"]
+bg_color = Color(0.0517621, 0.283033, 0.430751, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.158077, 0.434005, 0.500185, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="TranscieverMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+grow_vertical = 2
+script = ExtResource("1_ck7d7")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_top = -140.5
+offset_right = 216.0
+offset_bottom = 140.5
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkx2u")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 35
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 35
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.0796254, 0.246259, 0.300631, 1)
+theme_override_font_sizes/font_size = 30
+text = "TRANCIEVER
+"
+
+[node name="HSeparator2" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button_Call" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../Button_Exit")
+focus_neighbor_bottom = NodePath("../Button_Contacts")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_kcid2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kcid2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s6vc")
+text = "  Call Someone  "
+
+[node name="Button_Contacts" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s6vc")
+text = "Contacts
+"
+
+[node name="Button_StarNetwork" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s6vc")
+text = "Star Network"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Button_Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../Button_StarNetwork")
+focus_neighbor_bottom = NodePath("../Button_Call")
+theme_override_font_sizes/font_size = 34
+theme_override_styles/focus = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ph51u")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ah21q")
+theme_override_styles/normal = SubResource("StyleBoxFlat_5s6vc")
+text = "    Exit    "
+
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/Button_Call" to="." method="_on_button_call_mouse_entered"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button_Call" to="." method="_on_button_call_pressed"]
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/Button_Contacts" to="." method="_on_button_contacts_mouse_entered"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button_Contacts" to="." method="_on_button_contacts_pressed"]
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/Button_StarNetwork" to="." method="_on_button_star_network_mouse_entered"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button_StarNetwork" to="." method="_on_button_star_network_pressed"]
+[connection signal="mouse_entered" from="PanelContainer/MarginContainer/VBoxContainer/Button_Exit" to="." method="_on_button_exit_mouse_entered"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button_Exit" to="." method="_on_button_exit_pressed"]

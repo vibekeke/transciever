@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://ti4yhsbr72ul"]
+
+[ext_resource type="Texture2D" uid="uid://crhv1uak3r5b4" path="res://IMG_1177.PNG" id="1_1mlr6"]
+[ext_resource type="Script" path="res://main.gd" id="1_fxpxv"]
+[ext_resource type="PackedScene" uid="uid://dwcuu0xxvrd0b" path="res://UI/menu_transciever.tscn" id="3_kj77a"]
+[ext_resource type="PackedScene" uid="uid://cbgl6rhp3h3hi" path="res://transciever.tscn" id="4_m2rnd"]
+[ext_resource type="PackedScene" uid="uid://p8g7tpy65kip" path="res://Player/player.tscn" id="6_86dlx"]
+
+[sub_resource type="Environment" id="Environment_jt4h1"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.22
+glow_strength = 0.65
+glow_bloom = 0.26
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xm5gx"]
+radius = 53.0
+height = 222.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p3d6"]
+size = Vector2(110, 64)
+
+[node name="Main" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-1, 0)
+script = ExtResource("1_fxpxv")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jt4h1")
+
+[node name="Placeholder-home" type="Sprite2D" parent="."]
+position = Vector2(864, 445)
+scale = Vector2(0.663721, 0.560102)
+texture = ExtResource("1_1mlr6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(29, -173)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(617, 785)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xm5gx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(498, 815)
+shape = SubResource("RectangleShape2D_6p3d6")
+
+[node name="Transciever" parent="." instance=ExtResource("4_m2rnd")]
+position = Vector2(841, 580)
+scale = Vector2(0.5, 0.5)
+
+[node name="Player" parent="." instance=ExtResource("6_86dlx")]
+position = Vector2(1026, 743)
+scale = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TranscieverMenu" parent="CanvasLayer" instance=ExtResource("3_kj77a")]
+offset_left = 954.0
+offset_top = 370.0
+offset_right = 954.0
+offset_bottom = 370.0
+grow_vertical = 1
+scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true

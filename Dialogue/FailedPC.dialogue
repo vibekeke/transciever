@@ -1,0 +1,39 @@
+~ old_man
+Transciever: ...
+Transciever: ...
+Old man: ..Hello?
+Old man: Who is this?
+Old man: ..I can't he- you, you're too far away!
+Old man: ...
+- Who are you?
+	Old man: ..What!?
+- Can we be friends?
+	Old man: Ahh, err... I'm a actually a little[wait = 0.5] busy... these days. You seem like a chill person though! [wait = 1] ...I'm hanging up now!
+	Old man: *Click*
+Transciever: Call ended.
+=> END
+
+
+~ zoom
+Transciever: ...
+Transciever: ...
+???: You have reached a big dollup of fuck you! That's right!
+???: *Click*
+Transciever: Call ended.
+=> END
+
+~ crack
+Transiever: Crack!
+=> END
+
+~ vinyl
+Transciever: Vinyl!
+=> END
+
+~ pop
+Transciever: Pop!
+=> END
+
+~ doop
+Transciever: Doopedy doo!
+=> END

@@ -3,7 +3,8 @@ extends Node2D
 @onready var interaction_area: InteractionArea = $InteractionArea
 @onready var TrancieverMenu = get_node("/root/Main/CanvasLayer/TranscieverMenu")
 
-signal tranciever_interacted
+signal transciever_interacted
+#Ikke slett den, vi bruker den til interactionmanager lmao
 
 func _ready():
 	interaction_area.interact = Callable(self, "_on_interact") #Two arguments: self, and the name of the function we want
@@ -11,7 +12,7 @@ func _ready():
 
 func _on_interact():
 	print("Hey, we interacted!")
-	emit_signal("tranciever_interacted")
+	emit_signal("transciever_interacted")
 	TrancieverMenu.open_menu()
 	
 	await TrancieverMenu.tranciever_finished

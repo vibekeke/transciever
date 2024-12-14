@@ -49,13 +49,9 @@ func _on_button_exit_mouse_entered() -> void:
 
 func _on_button_call_pressed() -> void:
 	print("Made a phonecall!")
-	
 	hide()
 	
-	var balloon = preload("res://Dialogue/balloon.tscn").instantiate()
-	get_tree().current_scene.add_child(balloon)
-	balloon.start(load("res://Dialogue/dialogue.dialogue"), "this_is_a_node_title")
-	
+	NpcManager.call_someone()
 	await DialogueManager.dialogue_ended
 	#DialogueManager.show_dialogue_balloon(load("res://Dialogue/dialogue.dialogue"), "this_is_a_node_title")
 	finish_transciever()
@@ -67,4 +63,4 @@ func _on_button_star_network_pressed() -> void:
 	print("Opened Star Network!")
 
 func _on_button_exit_pressed() -> void:
-	exit_menu()
+	exit_menu() #Will also finish_ransciever()

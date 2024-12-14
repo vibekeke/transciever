@@ -3,7 +3,7 @@ extends CharacterBody2D
 #TODO redo all animasjon og bevegelse lmao, vi må bare komme oss til ny content
 
 var direction
-var preferred_anim = "walk_down"
+var preferred_anim = "_down"
 var move_speed = 250 #Slett kanskje
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var all_interactions = []

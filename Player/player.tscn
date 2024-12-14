@@ -158,9 +158,8 @@ script = ExtResource("1_apyxf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -219)
 sprite_frames = SubResource("SpriteFrames_h8gb4")
-animation = &"walk_down"
-frame = 3
-frame_progress = 0.68919
+animation = &"idle_down"
+frame_progress = 0.443695
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9, -42)

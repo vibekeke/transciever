@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://caiprjva0d7qh"]
+
+[ext_resource type="Script" path="res://Minigame/HUD/hud.gd" id="1_s08xu"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_s08xu")
+
+[node name="Dust" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "RedDust: "

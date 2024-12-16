@@ -9,6 +9,7 @@ var move_speed = 250 #Slett kanskje
 @onready var all_interactions = []
 
 
+
 func _physics_process(delta: float) -> void:
 	direction = Vector2.ZERO
 	

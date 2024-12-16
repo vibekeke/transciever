@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb2fa338hg0f"]
+
+[ext_resource type="Script" path="res://Minigame/starminigame.gd" id="1_6g85x"]
+[ext_resource type="PackedScene" uid="uid://dygv025u5enob" path="res://Backgrounds/univers_bakgrunn_opp.tscn" id="1_f5iaj"]
+[ext_resource type="Script" path="res://Minigame/line_2d.gd" id="2_7c84j"]
+[ext_resource type="PackedScene" uid="uid://b2eaobu4nb60v" path="res://Minigame/PlayerStar/PlayerStar.tscn" id="2_qjurt"]
+[ext_resource type="PackedScene" uid="uid://caiprjva0d7qh" path="res://Minigame/HUD/hud.tscn" id="5_gr5u4"]
+[ext_resource type="PackedScene" uid="uid://buync7yj37bpn" path="res://Minigame/Collectibles/red_dust.tscn" id="5_q4i1k"]
+
+[node name="StarMiniGame" type="Node2D"]
+script = ExtResource("1_6g85x")
+
+[node name="Univers" parent="." instance=ExtResource("1_f5iaj")]
+position = Vector2(146, 89)
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(826, -749, 826, 160)
+width = 1.0
+default_color = Color(0.500552, 0.691027, 0.844924, 1)
+script = ExtResource("2_7c84j")
+
+[node name="PlayerStar" parent="." instance=ExtResource("2_qjurt")]
+position = Vector2(825, 157)
+scale = Vector2(0.4, 0.4)
+friction = 0.2
+
+[node name="HUD" parent="." instance=ExtResource("5_gr5u4")]
+offset_left = 627.0
+offset_top = 18.0
+offset_right = 667.0
+offset_bottom = 58.0
+
+[node name="RedDust" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(907, 247)
+
+[node name="RedDust2" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(712, 577)
+
+[node name="RedDust11" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(899, 988)
+
+[node name="RedDust12" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(704, 1318)
+
+[node name="RedDust13" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(812, 1216)
+
+[node name="RedDust14" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(725, 1096)
+
+[node name="RedDust15" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(901, 1241)
+
+[node name="RedDust16" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(770, 1365)
+
+[node name="RedDust17" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(803, 1498)
+
+[node name="RedDust18" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(766, 1625)
+
+[node name="RedDust19" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(770, 1751)
+
+[node name="RedDust20" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(872, 1592)
+
+[node name="RedDust3" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(820, 475)
+
+[node name="RedDust4" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(733, 355)
+
+[node name="RedDust5" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(909, 500)
+
+[node name="RedDust6" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(778, 624)
+
+[node name="RedDust7" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(811, 757)
+
+[node name="RedDust8" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(774, 884)
+
+[node name="RedDust9" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(778, 1010)
+
+[node name="RedDust10" parent="." instance=ExtResource("5_q4i1k")]
+position = Vector2(880, 851)
+
+[connection signal="dash_finished" from="PlayerStar" to="Line2D" method="_on_player_star_dash_finished"]
+[connection signal="just_dashed" from="PlayerStar" to="Line2D" method="_on_player_star_just_dashed"]

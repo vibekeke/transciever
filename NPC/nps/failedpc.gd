@@ -2,6 +2,10 @@ extends Node2D
 
 
 var npc_name = "FailedPC"
+var available = true
+
+
+
 var relationship = 100
 var dialogue = "A"
 
@@ -10,11 +14,11 @@ var repeatable_dialogue = ["crack", "vinyl", "pop", "doop"]
 
 func get_dialogue():
 	if len(onetime_dialogue) < 1:
-		dialogue = repeatable_dialogue[randi_range(0, (len(repeatable_dialogue) - 1))]
+		dialogue = repeatable_dialogue.pick_random()
 	else: 
-		var chosen = randi_range(0, (len(onetime_dialogue) - 1))
-		dialogue = onetime_dialogue[chosen]
-		onetime_dialogue.remove_at(chosen)
+		var chosen = onetime_dialogue.pick_random() #Returns a string
+		dialogue = chosen
+		onetime_dialogue.erase(chosen)
 	return [npc_name, dialogue]
 	
 	

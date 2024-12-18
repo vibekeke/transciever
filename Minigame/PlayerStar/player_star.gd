@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var sprite = $Sprite2D
 @onready var dash_cooldown = $DashCooldown
 
-@export var player_speed = 200
-@export var friction = 0.5
+@export var player_speed = 300
+@export var friction = 0
 
 var rotation_velocity = 10.0  # Starting speed of rotation
 var max_rotation_velocity = 100.0     # Max speed for rotation
@@ -41,6 +41,7 @@ func _physics_process(delta: float) -> void:
 		dash_direction = direction.normalized()
 		velocity = dash_direction * dash_speed
 		velocity *= 1.0 - (friction * delta)
+		
 		emit_signal("just_dashed", dash_direction * dash_speed)
 	
 	#Rotation

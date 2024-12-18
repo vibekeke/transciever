@@ -1,17 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://buync7yj37bpn"]
+[gd_scene load_steps=7 format=3 uid="uid://buync7yj37bpn"]
 
 [ext_resource type="Script" path="res://Minigame/Collectibles/red_dust.gd" id="1_ad0e6"]
-[ext_resource type="Texture2D" uid="uid://b3ql4unt1tmnh" path="res://Minigame/Assets/RED.png" id="2_7g25r"]
+[ext_resource type="Texture2D" uid="uid://dxfmxxm4qdi7v" path="res://Minigame/Assets/dust_red1.png" id="2_ps7g1"]
+[ext_resource type="Texture2D" uid="uid://cnwi3enw1k2b" path="res://Minigame/Assets/dust_red2.png" id="3_p6tq5"]
+[ext_resource type="Texture2D" uid="uid://bua8iiw6fwmcd" path="res://Minigame/Assets/dust_red3.png" id="4_ghat8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wy6oh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ps7g1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_p6tq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ghat8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_w3eyv"]
 
 [node name="RedDust" type="Area2D"]
 script = ExtResource("1_ad0e6")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_7g25r")
+sprite_frames = SubResource("SpriteFrames_wy6oh")
+frame_progress = 0.2569
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_w3eyv")

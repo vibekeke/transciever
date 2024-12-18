@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://66wkdnwsmcd" path="res://Minigame/PlayerStar/Star_spinning_Thicc.png" id="1_wk22j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vg3w"]
-radius = 56.0803
+radius = 40.6079
 
 [node name="PlayerStar" type="CharacterBody2D"]
 script = ExtResource("1_o3oyf")

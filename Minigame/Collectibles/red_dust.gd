@@ -10,7 +10,7 @@ var collected_value = 1
 
 func _ready() -> void:
 	randomize()
-	speed_multiplier = randf_range(1.0, 2.5)
+	speed_multiplier = [1, 1.5, 2, 2.5].pick_random() #Note: kanskje bare en fast hastighet per farge?
 	sprite.rotation_degrees = randi_range(0, 50)
 	sprite.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -28,6 +28,5 @@ func _process(delta: float) -> void:
 		
 
 func _on_body_entered(body: Node2D) -> void:
-	GameManager.emit_signal("collectible_collected", "RedDust", collected_value)
-	print("collected")
+	GameManager.emit_signal("collectible_collected", "red_dust", collected_value)
 	queue_free()

@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2eaobu4nb60v"]
+[gd_scene load_steps=7 format=3 uid="uid://b2eaobu4nb60v"]
 
 [ext_resource type="Script" path="res://Minigame/PlayerStar/player_star.gd" id="1_o3oyf"]
-[ext_resource type="Texture2D" uid="uid://66wkdnwsmcd" path="res://Minigame/PlayerStar/Star_spinning_Thicc.png" id="1_wk22j"]
+[ext_resource type="Shader" path="res://Minigame/PlayerStar/PlayerStar.gdshader" id="1_ud4cm"]
+[ext_resource type="Texture2D" uid="uid://cf6dwjyl3qwse" path="res://Minigame/PlayerStar/Star_spinning_Thicc2.png" id="3_awvfq"]
+[ext_resource type="Texture2D" uid="uid://c3imrdnxl7vqq" path="res://Minigame/PlayerStar/2d_lights_and_shadows_neutral_point_light.webp" id="4_kajtf"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ovm4x"]
+shader = ExtResource("1_ud4cm")
+shader_parameter/red_intensity = 0.7
+shader_parameter/green_intensity = 0.7
+shader_parameter/blue_intensity = 0.8
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vg3w"]
 radius = 40.6079
@@ -10,9 +18,10 @@ radius = 40.6079
 script = ExtResource("1_o3oyf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ovm4x")
 position = Vector2(-2, 5)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_wk22j")
+texture = ExtResource("3_awvfq")
 hframes = 3
 vframes = 4
 
@@ -22,5 +31,10 @@ one_shot = true
 
 [node name="CollectionShape" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6vg3w")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.596644, 0.99166, 1, 1)
+energy = 8.06
+texture = ExtResource("4_kajtf")
 
 [connection signal="timeout" from="DashCooldown" to="." method="_on_dash_cooldown_timeout"]

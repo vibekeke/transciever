@@ -1,39 +1,32 @@
-[gd_scene load_steps=7 format=3 uid="uid://buync7yj37bpn"]
+[gd_scene load_steps=7 format=3 uid="uid://c7t6i21abk6b2"]
 
-[ext_resource type="Script" path="res://Minigame/Collectibles/red_dust.gd" id="1_ad0e6"]
-[ext_resource type="Texture2D" uid="uid://dxfmxxm4qdi7v" path="res://Minigame/Assets/dust_red1.png" id="2_ps7g1"]
-[ext_resource type="Texture2D" uid="uid://cnwi3enw1k2b" path="res://Minigame/Assets/dust_red2.png" id="3_p6tq5"]
-[ext_resource type="Texture2D" uid="uid://bua8iiw6fwmcd" path="res://Minigame/Assets/dust_red3.png" id="4_ghat8"]
+[ext_resource type="PackedScene" uid="uid://buync7yj37bpn" path="res://Minigame/Collectibles/stardust.tscn" id="1_7bnfw"]
+[ext_resource type="Script" path="res://Minigame/Collectibles/red_dust.gd" id="2_2ujk3"]
+[ext_resource type="Texture2D" uid="uid://dxfmxxm4qdi7v" path="res://Minigame/Assets/dust_red1.png" id="3_cpr4s"]
+[ext_resource type="Texture2D" uid="uid://cnwi3enw1k2b" path="res://Minigame/Assets/dust_red2.png" id="4_t0nd8"]
+[ext_resource type="Texture2D" uid="uid://bua8iiw6fwmcd" path="res://Minigame/Assets/dust_red3.png" id="5_m71j5"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wy6oh"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_uvl8i"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_ps7g1")
+"texture": ExtResource("3_cpr4s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_p6tq5")
+"texture": ExtResource("4_t0nd8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_ghat8")
+"texture": ExtResource("5_m71j5")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w3eyv"]
+[node name="RedDust" instance=ExtResource("1_7bnfw")]
+script = ExtResource("2_2ujk3")
 
-[node name="RedDust" type="Area2D"]
-script = ExtResource("1_ad0e6")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" parent="." index="0"]
 scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_wy6oh")
-frame_progress = 0.2569
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_w3eyv")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+sprite_frames = SubResource("SpriteFrames_uvl8i")
+frame_progress = 0.0

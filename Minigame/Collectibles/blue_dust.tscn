@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1p0d563j6pvu"]
+[gd_scene load_steps=7 format=3 uid="uid://d2i76ttpa64q0"]
 
-[ext_resource type="Script" path="res://Minigame/Collectibles/red_dust.gd" id="1_t3s4n"]
+[ext_resource type="PackedScene" uid="uid://buync7yj37bpn" path="res://Minigame/Collectibles/stardust.tscn" id="1_6s5bm"]
 [ext_resource type="Texture2D" uid="uid://bj5p6nynknawx" path="res://Minigame/Assets/dust_blue1.png" id="2_oaqfx"]
+[ext_resource type="Script" path="res://Minigame/Collectibles/blue_dust.gd" id="2_tts25"]
 [ext_resource type="Texture2D" uid="uid://d0e6dbpwd0id4" path="res://Minigame/Assets/dust_blue2.png" id="3_ndigc"]
 [ext_resource type="Texture2D" uid="uid://bsde5v34wkxbd" path="res://Minigame/Assets/dust_blue3.png" id="4_0i1kj"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_wy6oh"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_aflsq"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -22,18 +23,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_w3eyv"]
+[node name="BlueDust" instance=ExtResource("1_6s5bm")]
+script = ExtResource("2_tts25")
 
-[node name="BlueDust" type="Area2D"]
-script = ExtResource("1_t3s4n")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" parent="." index="0"]
 scale = Vector2(0.2, 0.2)
-sprite_frames = SubResource("SpriteFrames_wy6oh")
-frame_progress = 0.540249
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_w3eyv")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+sprite_frames = SubResource("SpriteFrames_aflsq")
+frame_progress = 0.0

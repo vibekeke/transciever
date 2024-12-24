@@ -95,13 +95,24 @@ func _on_dash_cooldown_timeout() -> void:
 	emit_signal("dash_finished")
 
 func _on_collectible_collected(collectible, amount):
+	#Changing variables:
 	match collectible:
 		"red_dust":
 			red_intensity += color_increase * amount  # Increase red intensity
-			light_energy += light_increase * amount
-			star_size += size_increase * amount
-		# Clamp intensity values to prevent them from going beyond the max value (0.7 in your case)
+		"blue_dust":
+			blue_intensity += color_increase * amount
+		"green_dust":
+			green_intensity += color_increase * amount
+		"white_dust":
+			red_intensity += color_increase * 3
+			blue_intensity += color_increase * 3
+			green_intensity += color_increase * 3
 	
+	light_energy += light_increase * amount
+	star_size += size_increase * amount
+	
+	
+	# Clamp intensity values to prevent them from going beyond the max value (0.7 in your case)
 	red_intensity = clamp(red_intensity, 0.0, max_red)
 	green_intensity = clamp(green_intensity, 0.0, max_green)
 	blue_intensity = clamp(blue_intensity, 0.0, max_blue)
@@ -109,11 +120,13 @@ func _on_collectible_collected(collectible, amount):
 	star_size = clamp(star_size, 0.0, max_star_size)
 	light_energy = clamp(light_energy, 0.0, 8.0)
 	
-	#Updating values
+	#Updating visuals according to variables
 	scale = Vector2(star_size, star_size)
-	sprite.material.set_shader_parameter("blue_intensity", red_intensity)
+	sprite.material.set_shader_parameter("red_intensity", red_intensity)
+	sprite.material.set_shader_parameter("blue_intensity", blue_intensity)
+	sprite.material.set_shader_parameter("green_intensity", green_intensity)
 	
 	point_light.energy = light_energy
-	
-	print("Blue_intensity: " + str(red_intensity))
+	print("Red_intensity: " + str(red_intensity))
+	print("Blue_intensity: " + str(blue_intensity))
 	print("Light_energy: " + str(light_energy))

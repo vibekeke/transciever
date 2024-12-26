@@ -24,9 +24,9 @@ var green_intensity: float = 0.0
 var blue_intensity: float = 0.0
 var light_energy = 1.0
 
-var color_increase = 0.02
+var color_increase = 0.01
 var light_increase = 0.1
-var size_increase = 0.01
+var size_increase = 0.005
 
 var max_red = 1.0 #Might differ from the actual shader max-values, but good to clamp anyways.
 var max_green = 0.60

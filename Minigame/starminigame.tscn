@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bb2fa338hg0f"]
+[gd_scene load_steps=11 format=3 uid="uid://bb2fa338hg0f"]
 
 [ext_resource type="Script" path="res://Minigame/starminigame.gd" id="1_6g85x"]
 [ext_resource type="PackedScene" uid="uid://dygv025u5enob" path="res://Backgrounds/univers_bakgrunn_opp.tscn" id="1_f5iaj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b2eaobu4nb60v" path="res://Minigame/PlayerStar/PlayerStar.tscn" id="2_qjurt"]
 [ext_resource type="PackedScene" uid="uid://caiprjva0d7qh" path="res://Minigame/HUD/hud.tscn" id="5_gr5u4"]
 [ext_resource type="PackedScene" uid="uid://c7t6i21abk6b2" path="res://Minigame/Collectibles/red_dust.tscn" id="5_q4i1k"]
+[ext_resource type="PackedScene" uid="uid://dkoflrkbd08b1" path="res://Minigame/Spawners/collectible_spawner.tscn" id="6_w6h2x"]
 [ext_resource type="PackedScene" uid="uid://d2i76ttpa64q0" path="res://Minigame/Collectibles/blue_dust.tscn" id="7_0l37m"]
 [ext_resource type="PackedScene" uid="uid://cnbb24uje3irj" path="res://Minigame/Collectibles/green_dust.tscn" id="8_cofe0"]
 
@@ -47,116 +48,17 @@ offset_top = 18.0
 offset_right = 667.0
 offset_bottom = 58.0
 
-[node name="BlueDust" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(823, 721)
+[node name="CollectibleSpawner" parent="." instance=ExtResource("6_w6h2x")]
+position = Vector2(910, 889)
+collectible_scene = ExtResource("7_0l37m")
 
-[node name="BlueDust2" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(820, 372)
+[node name="CollectibleSpawner2" parent="." instance=ExtResource("6_w6h2x")]
+position = Vector2(739, 894)
+collectible_scene = ExtResource("8_cofe0")
 
-[node name="BlueDust3" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(823, 446)
-
-[node name="BlueDust4" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(820, 532)
-
-[node name="BlueDust5" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(816, 599)
-
-[node name="BlueDust6" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(819, 667)
-
-[node name="BlueDust7" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(824, 768)
-
-[node name="BlueDust8" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(830, 823)
-
-[node name="BlueDust9" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(826, 882)
-
-[node name="BlueDust10" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(834, 948)
-
-[node name="BlueDust11" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(814, 1012)
-
-[node name="BlueDust12" parent="." instance=ExtResource("7_0l37m")]
-position = Vector2(817, 1061)
-
-[node name="GreenDust" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1004, 378)
-
-[node name="GreenDust2" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1002, 449)
-
-[node name="GreenDust3" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1005, 518)
-
-[node name="GreenDust4" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1002, 576)
-
-[node name="GreenDust5" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(997, 647)
-
-[node name="GreenDust6" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1004, 714)
-
-[node name="GreenDust7" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(998, 774)
-
-[node name="GreenDust8" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1007, 828)
-
-[node name="GreenDust9" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(995, 891)
-
-[node name="GreenDust10" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1007, 948)
-
-[node name="GreenDust11" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(1004, 999)
-
-[node name="RedDust" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(657, 911)
-
-[node name="GreenDust12" parent="." instance=ExtResource("8_cofe0")]
-position = Vector2(998, 1051)
-
-[node name="RedDust2" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(660, 965)
-
-[node name="RedDust3" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(654, 1028)
-
-[node name="RedDust4" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(661, 1098)
-
-[node name="RedDust5" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(660, 1152)
-
-[node name="RedDust6" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(658, 1210)
-
-[node name="RedDust7" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(654, 1273)
-
-[node name="RedDust8" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(667, 1319)
-
-[node name="RedDust9" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(668, 1376)
-
-[node name="RedDust10" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(663, 1430)
-
-[node name="RedDust11" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(657, 1485)
-
-[node name="RedDust12" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(650, 1545)
-
-[node name="RedDust13" parent="." instance=ExtResource("5_q4i1k")]
-position = Vector2(656, 1604)
+[node name="CollectibleSpawner3" parent="." instance=ExtResource("6_w6h2x")]
+position = Vector2(1067, 903)
+collectible_scene = ExtResource("5_q4i1k")
 
 [connection signal="dash_finished" from="PlayerStar" to="Line2D" method="_on_player_star_dash_finished"]
 [connection signal="just_dashed" from="PlayerStar" to="Line2D" method="_on_player_star_just_dashed"]

@@ -7,9 +7,9 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ovm4x"]
 shader = ExtResource("1_ud4cm")
-shader_parameter/red_intensity = 0.7
-shader_parameter/green_intensity = 0.7
-shader_parameter/blue_intensity = 0.8
+shader_parameter/red_intensity = 0.0
+shader_parameter/green_intensity = 0.0
+shader_parameter/blue_intensity = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vg3w"]
 radius = 40.6079

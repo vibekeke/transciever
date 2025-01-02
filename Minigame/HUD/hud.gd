@@ -1,6 +1,8 @@
 extends Control
 
 @onready var redlabel = $Dust
+@onready var bluelabel = $BlueDustLabel
+@onready var greenlabel = $GreenDustLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,5 +19,6 @@ func _on_game_stats_changed():
 
 func update_stats():
 	redlabel.text = "Red Dust: " + str(GameManager.red_dust_collected)
-
+	bluelabel.text = "Blue Dust: " + str(GameManager.blue_dust_collected)
+	greenlabel.text = "Green Dust: " + str(GameManager.green_dust_collected)
 	

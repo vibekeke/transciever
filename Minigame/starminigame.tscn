@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bb2fa338hg0f"]
+[gd_scene load_steps=12 format=3 uid="uid://bb2fa338hg0f"]
 
 [ext_resource type="Script" path="res://Minigame/starminigame.gd" id="1_6g85x"]
 [ext_resource type="PackedScene" uid="uid://dygv025u5enob" path="res://Backgrounds/univers_bakgrunn_opp.tscn" id="1_f5iaj"]
@@ -6,9 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://b2eaobu4nb60v" path="res://Minigame/PlayerStar/PlayerStar.tscn" id="2_qjurt"]
 [ext_resource type="PackedScene" uid="uid://caiprjva0d7qh" path="res://Minigame/HUD/hud.tscn" id="5_gr5u4"]
 [ext_resource type="PackedScene" uid="uid://c7t6i21abk6b2" path="res://Minigame/Collectibles/red_dust.tscn" id="5_q4i1k"]
-[ext_resource type="PackedScene" uid="uid://dkoflrkbd08b1" path="res://Minigame/Spawners/collectible_spawner.tscn" id="6_w6h2x"]
+[ext_resource type="PackedScene" uid="uid://dkoflrkbd08b1" path="res://Minigame/Spawners/base_spawner.tscn" id="6_w6h2x"]
 [ext_resource type="PackedScene" uid="uid://d2i76ttpa64q0" path="res://Minigame/Collectibles/blue_dust.tscn" id="7_0l37m"]
 [ext_resource type="PackedScene" uid="uid://cnbb24uje3irj" path="res://Minigame/Collectibles/green_dust.tscn" id="8_cofe0"]
+[ext_resource type="PackedScene" uid="uid://cnimijg5cwoy1" path="res://Minigame/Obstacles/base_obstacle.tscn" id="10_3ulj8"]
 
 [sub_resource type="Environment" id="Environment_wdcnr"]
 background_mode = 3
@@ -50,15 +51,19 @@ offset_bottom = 58.0
 
 [node name="CollectibleSpawner" parent="." instance=ExtResource("6_w6h2x")]
 position = Vector2(910, 889)
-collectible_scene = ExtResource("7_0l37m")
+spawnable_scene = ExtResource("7_0l37m")
 
 [node name="CollectibleSpawner2" parent="." instance=ExtResource("6_w6h2x")]
 position = Vector2(739, 894)
-collectible_scene = ExtResource("8_cofe0")
+spawnable_scene = ExtResource("8_cofe0")
 
 [node name="CollectibleSpawner3" parent="." instance=ExtResource("6_w6h2x")]
-position = Vector2(1067, 903)
-collectible_scene = ExtResource("5_q4i1k")
+position = Vector2(829, 893)
+spawnable_scene = ExtResource("5_q4i1k")
+
+[node name="Spawner" parent="." instance=ExtResource("6_w6h2x")]
+position = Vector2(1054, 730)
+spawnable_scene = ExtResource("10_3ulj8")
 
 [connection signal="dash_finished" from="PlayerStar" to="Line2D" method="_on_player_star_dash_finished"]
 [connection signal="just_dashed" from="PlayerStar" to="Line2D" method="_on_player_star_just_dashed"]

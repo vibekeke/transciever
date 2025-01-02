@@ -25,7 +25,7 @@ var blue_intensity: float = 0.0
 var light_energy = 1.0
 
 var color_increase = 0.01
-var light_increase = 0.1
+var light_increase = 0.05
 var size_increase = 0.005
 
 var max_red = 1.0 #Might differ from the actual shader max-values, but good to clamp anyways.
@@ -99,10 +99,16 @@ func _on_collectible_collected(collectible, amount):
 	match collectible:
 		"red_dust":
 			red_intensity += color_increase * amount  # Increase red intensity
+			blue_intensity -= (color_increase/4) * amount
+			green_intensity -= (color_increase/4) * amount
 		"blue_dust":
 			blue_intensity += color_increase * amount
+			green_intensity -= (color_increase/4) * amount
+			red_intensity -= (color_increase/4) * amount
 		"green_dust":
 			green_intensity += color_increase * amount
+			red_intensity -= (color_increase/4) * amount
+			blue_intensity -= (color_increase/4) * amount
 		"white_dust":
 			red_intensity += color_increase * 3
 			blue_intensity += color_increase * 3
@@ -129,4 +135,5 @@ func _on_collectible_collected(collectible, amount):
 	point_light.energy = light_energy
 	print("Red_intensity: " + str(red_intensity))
 	print("Blue_intensity: " + str(blue_intensity))
-	print("Light_energy: " + str(light_energy))
+	print("Green_intensity: " +  str(green_intensity))
+	#print("Light_energy: " + str(light_energy))

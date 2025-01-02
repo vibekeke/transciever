@@ -26,7 +26,6 @@ func _process(delta: float) -> void:
 	sprite.rotation_degrees = fmod(sprite.rotation_degrees, 360)
 	
 	if position.y < -10:
-		print("deleting self")
 		queue_free()
 		
 

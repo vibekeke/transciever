@@ -22,6 +22,7 @@ Global="*res://Globals/global.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 NpcManager="*res://Globals/npc_manager.gd"
 GameManager="*res://Globals/game_manager.gd"
+InventoryManager="*res://Globals/inventory_manager.gd"
 
 [dialogue_manager]
 
@@ -29,8 +30,8 @@ general/balloon_path="res://Dialogue/balloon.tscn"
 
 [display]
 
-window/size/viewport_width=1800
-window/size/viewport_height=800
+window/size/viewport_width=1760
+window/size/viewport_height=990
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 

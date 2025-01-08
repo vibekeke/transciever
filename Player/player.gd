@@ -8,7 +8,8 @@ var move_speed = 250 #Slett kanskje
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var all_interactions = []
 
-
+func _ready():
+	InventoryManager.set_player_reference(self)
 
 func _physics_process(delta: float) -> void:
 	direction = Vector2.ZERO

@@ -19,9 +19,9 @@ var can_dash = true
 signal just_dashed(direction)
 signal dash_finished
 
-var red_intensity: float = 0.0
-var green_intensity: float = 0.0
-var blue_intensity: float = 0.0
+var red_intensity: float = 1.0
+var green_intensity: float = 1.0
+var blue_intensity: float = 1.0
 var light_energy = 1.0
 
 var color_increase = 0.01

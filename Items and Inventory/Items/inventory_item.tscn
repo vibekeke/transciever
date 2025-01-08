@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwigp1ltbfu73"]
+
+[ext_resource type="Script" path="res://Items and Inventory/Items/inventory_item.gd" id="1_b66th"]
+[ext_resource type="PackedScene" uid="uid://mwsjhlbqeq2m" path="res://interaction/interaction area/interaction_area.tscn" id="2_dbtb1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_72c5w"]
+radius = 61.2046
+
+[node name="InventoryItem" type="Node2D" groups=["items"]]
+script = ExtResource("1_b66th")
+item_effect = null
+
+[node name="Sprite2D" type="Sprite2D" parent="." groups=["items"]]
+position = Vector2(1.52588e-05, -1.52588e-05)
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_dbtb1")]
+action_name = "pick up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_72c5w")

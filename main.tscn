@@ -89,119 +89,99 @@ position = Vector2(-1, 2.285)
 [node name="InventoryItem2" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(469, 747)
 item_type = "a"
-item_effect = ""
 item_texture = ExtResource("8_8cua2")
 
 [node name="InventoryItem" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(615, 746)
 item_type = "b"
-item_effect = ""
 item_texture = ExtResource("9_en3hm")
 
 [node name="InventoryItem3" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(777, 752)
 item_type = "c"
-item_effect = ""
 item_texture = ExtResource("8_textc")
 
 [node name="InventoryItem4" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1097, 825)
 item_type = "d"
-item_effect = ""
 item_texture = ExtResource("8_textc")
 
 [node name="InventoryItem5" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1247, 842)
 item_type = "e"
-item_effect = ""
 item_texture = ExtResource("11_4t7eq")
 
 [node name="InventoryItem6" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(620, 887)
 item_type = "f"
-item_effect = ""
 item_texture = ExtResource("8_8cua2")
 
 [node name="InventoryItem7" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(741, 957)
 item_type = "g"
-item_effect = ""
 item_texture = ExtResource("12_ow8qa")
 
 [node name="InventoryItem8" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(891, 1028)
 item_type = "h"
-item_effect = ""
 item_texture = ExtResource("13_61ind")
 
 [node name="InventoryItem9" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(639, 1089)
 item_type = "i"
-item_effect = ""
 item_texture = ExtResource("14_k681l")
 
 [node name="InventoryItem10" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(529, 983)
 item_type = "j"
-item_effect = ""
 item_texture = ExtResource("8_textc")
 
 [node name="InventoryItem11" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(796, 1141)
 item_type = "k"
-item_effect = ""
 item_texture = ExtResource("15_bqcha")
 
 [node name="InventoryItem12" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1050, 990)
 item_type = "l"
-item_effect = ""
 item_texture = ExtResource("8_8cua2")
 
 [node name="InventoryItem13" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1278, 1007)
 item_type = "m"
-item_effect = ""
 item_texture = ExtResource("9_en3hm")
 
 [node name="InventoryItem14" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1079, 1117)
 item_type = "q"
-item_effect = ""
 item_texture = ExtResource("16_1udsg")
 
 [node name="InventoryItem15" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1229, 1131)
 item_type = "w"
-item_effect = ""
 item_texture = ExtResource("15_bqcha")
 
 [node name="InventoryItem16" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1381, 1128)
 item_type = "e"
-item_effect = ""
 item_texture = ExtResource("8_8cua2")
 
 [node name="InventoryItem17" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1449, 966)
 item_type = "r"
-item_effect = ""
 item_texture = ExtResource("13_61ind")
 
 [node name="InventoryItem18" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(920, 877)
 item_type = "s"
-item_effect = ""
 item_texture = ExtResource("8_textc")
 
 [node name="InventoryItem19" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(936, 1190)
 item_type = "t"
-item_effect = ""
 item_texture = ExtResource("16_1udsg")
 
 [node name="InventoryItem20" parent="." instance=ExtResource("5_ooeul")]
 position = Vector2(1526, 1108)
 item_type = "u"
-item_effect = ""
 item_texture = ExtResource("8_textc")

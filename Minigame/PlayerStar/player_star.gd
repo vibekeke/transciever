@@ -19,13 +19,13 @@ var can_dash = true
 signal just_dashed(direction)
 signal dash_finished
 
-var red_intensity: float = 1.0
-var green_intensity: float = 1.0
-var blue_intensity: float = 1.0
-var light_energy = 1.0
+var red_intensity: float = 0
+var green_intensity: float = 0
+var blue_intensity: float = 0
+var light_energy = 0
 
 var color_increase = 0.01
-var light_increase = 0.05
+var light_increase = 0.02
 var size_increase = 0.005
 
 var max_red = 1.0 #Might differ from the actual shader max-values, but good to clamp anyways.
@@ -34,6 +34,7 @@ var max_blue = 0.65
 
 var star_size = 0.2
 var max_star_size = 2.0
+var max_light_energy = 8.0
 
 func _ready():
 	GameManager.collectible_collected.connect(_on_collectible_collected)
@@ -124,7 +125,7 @@ func _on_collectible_collected(collectible, amount):
 	blue_intensity = clamp(blue_intensity, 0.0, max_blue)
 	
 	star_size = clamp(star_size, 0.0, max_star_size)
-	light_energy = clamp(light_energy, 0.0, 8.0)
+	light_energy = clamp(light_energy, 0.0, max_light_energy)
 	
 	#Updating visuals according to variables
 	scale = Vector2(star_size, star_size)

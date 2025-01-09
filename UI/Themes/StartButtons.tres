@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://bjspls3i8cgb2"]
 
-[ext_resource type="FontFile" uid="uid://dax6t5vxeo20r" path="res://Fonts and Styles/Montserrat-Light.ttf" id="1_rqm8h"]
+[ext_resource type="FontFile" uid="uid://dax6t5vxeo20r" path="res://UI/Fonts/Montserrat-Light.ttf" id="1_rqm8h"]
 
 [resource]
 default_font = ExtResource("1_rqm8h")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://ti4yhsbr72ul"]
+[gd_scene load_steps=21 format=3 uid="uid://ti4yhsbr72ul"]
 
 [ext_resource type="Texture2D" uid="uid://crhv1uak3r5b4" path="res://IMG_1177.PNG" id="1_1mlr6"]
 [ext_resource type="Script" path="res://main.gd" id="1_fxpxv"]
 [ext_resource type="PackedScene" uid="uid://dwcuu0xxvrd0b" path="res://UI/menu_transciever.tscn" id="3_kj77a"]
 [ext_resource type="PackedScene" uid="uid://cbgl6rhp3h3hi" path="res://transciever.tscn" id="4_m2rnd"]
-[ext_resource type="PackedScene" uid="uid://cwigp1ltbfu73" path="res://Items and Inventory/Items/inventory_item.tscn" id="5_ooeul"]
+[ext_resource type="PackedScene" uid="uid://cwigp1ltbfu73" path="res://Items/Items/inventory_item.tscn" id="5_ooeul"]
 [ext_resource type="PackedScene" uid="uid://p8g7tpy65kip" path="res://Player/player.tscn" id="6_86dlx"]
 [ext_resource type="PackedScene" uid="uid://pg47ky8bslua" path="res://Backgrounds/univers_bakgrunn.tscn" id="6_bw3ae"]
+[ext_resource type="PackedScene" uid="uid://soflx4c45gk2" path="res://UI/Inventory UI/inventory_ui.tscn" id="6_k3gj8"]
 [ext_resource type="Texture2D" uid="uid://mjqr6ddklpil" path="res://Minigame/Assets/dust_green1.png" id="8_8cua2"]
 [ext_resource type="Texture2D" uid="uid://d0e6dbpwd0id4" path="res://Minigame/Assets/dust_blue2.png" id="8_textc"]
 [ext_resource type="Texture2D" uid="uid://bua8iiw6fwmcd" path="res://Minigame/Assets/dust_red3.png" id="9_en3hm"]
@@ -80,10 +81,17 @@ grow_vertical = 1
 scale = Vector2(0.5, 0.5)
 metadata/_edit_use_anchors_ = true
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+[node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("6_k3gj8")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="CanvasLayerBG" type="CanvasLayer" parent="."]
 layer = -1
 
-[node name="Univers" parent="CanvasLayer2" instance=ExtResource("6_bw3ae")]
+[node name="Univers" parent="CanvasLayerBG" instance=ExtResource("6_bw3ae")]
 position = Vector2(-1, 2.285)
 
 [node name="InventoryItem2" parent="." instance=ExtResource("5_ooeul")]

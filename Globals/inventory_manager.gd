@@ -3,7 +3,7 @@ extends Node
 #Jeg syns ikke det å begrense inventoryen virker gøy i dette tilfellet.
 
 var inventory = []
-var inventory_size = 20
+var inventory_size = 30
 var player_node: Node = null #Vet ikke hvorfor vi trenger dette.
 
 signal inventory_updated #To signal to the UI
@@ -37,7 +37,6 @@ func add_item(item):
 					inventory.push_front(item)
 					inventory.pop_back()
 					break
-	print(inventory)
 	emit_signal("inventory_updated") #TODO update UI to match changes
 
 func remove_item(item):

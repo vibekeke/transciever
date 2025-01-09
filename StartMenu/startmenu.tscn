@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://pg47ky8bslua" path="res://Backgrounds/univers_bakgrunn.tscn" id="1_bdldk"]
 [ext_resource type="Texture2D" uid="uid://ctv8mx8geuijk" path="res://StartMenu/Abatha cover skisse.png" id="2_8xu1j"]
-[ext_resource type="Theme" uid="uid://bjspls3i8cgb2" path="res://Fonts and Styles/StartButtons.tres" id="3_dw2po"]
-[ext_resource type="StyleBox" uid="uid://ch8ink1m5hmpf" path="res://Fonts and Styles/invisibutton.tres" id="4_h7wml"]
-[ext_resource type="FontFile" uid="uid://b7ds78jvd6nrp" path="res://Fonts and Styles/Montserrat-Thin.ttf" id="5_whhxr"]
+[ext_resource type="Theme" uid="uid://bjspls3i8cgb2" path="res://UI/Themes/StartButtons.tres" id="3_dw2po"]
+[ext_resource type="StyleBox" uid="uid://ch8ink1m5hmpf" path="res://UI/Themes/invisibutton.tres" id="4_h7wml"]
+[ext_resource type="FontFile" uid="uid://b7ds78jvd6nrp" path="res://UI/Fonts/Montserrat-Thin.ttf" id="5_whhxr"]
 [ext_resource type="PackedScene" uid="uid://efabnrqk7v4g" path="res://StartMenu/MenuStar.tscn" id="6_nwlqf"]
 
 [sub_resource type="Environment" id="Environment_ouj12"]

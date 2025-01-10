@@ -7,8 +7,9 @@ var inventory_size = 30
 var player_node: Node = null #Vet ikke hvorfor vi trenger dette.
 
 signal inventory_updated #To signal to the UI
+signal focus_toggled()
 
-
+var focus_enabled = true
 
 func _ready():
 	inventory.resize(inventory_size) #30 slots, spread over 9 per row
@@ -46,3 +47,10 @@ func set_player_reference(player):
 	player_node = player
 	#Vet ikke hvorfor vi trenger dette...
 	
+func disable_focus():
+	focus_enabled = false
+	emit_signal("focus_toggled")
+
+func enable_focus():
+	focus_enabled = true
+	emit_signal("focus_toggled")

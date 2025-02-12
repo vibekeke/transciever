@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var npc_name = "FailedPC"
+var npc_name = "ch_FailedPC"
 var available = true
 
 

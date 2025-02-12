@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://bn0s5c8ed3mi4"
+path="res://.godot/imported/ch_Angel.dialogue-c3dec0934123017f5dc08f49402a7b44.tres"
+
+[deps]
+
+source_file="res://Dialogue/ch_Angel.dialogue"
+dest_files=["res://.godot/imported/ch_Angel.dialogue-c3dec0934123017f5dc08f49402a7b44.tres"]
+
+[params]
+
+defaults=true

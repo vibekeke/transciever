@@ -9,8 +9,8 @@ var npc_list : Array[String] = []
 #Vet ikke hvorfor men export var funka ikke veldig kult.
 var call_history = []
 
-var FailedPC = load("res://NPC/nps/failedpc.tscn").instantiate() #Do not add him to the list!
-var Angel = load("res://NPC/nps/angel.tscn").instantiate()
+var ch_FailedPC = load("res://Characters/character_scenes/ch_failedpc.tscn").instantiate() #Do not add him to the list!
+var ch_Angel = load("res://Characters/character_scenes/ch_angel.tscn").instantiate()
 
 
 func _ready():
@@ -36,7 +36,7 @@ func find_someone():
 	#Senere, lavere frekvens av FailedPC.
 	#Hvis alle er ferdige -> FailedPC
 	#Midlertidig fordi vi bare har en karakter lol:
-	return FailedPC
+	return ch_FailedPC
 
 func start_conversation(filename, dialogue):
 	var balloon = preload("res://Dialogue/balloon.tscn").instantiate()

@@ -9,8 +9,8 @@ var npc_list : Array[String] = []
 #Vet ikke hvorfor men export var funka ikke veldig kult.
 var call_history = []
 
-var ch_FailedPC = load("res://Characters/character_scenes/ch_failedpc.tscn").instantiate() #Do not add him to the list!
-var ch_Angel = load("res://Characters/character_scenes/ch_angel.tscn").instantiate()
+var FailedPC = load("res://NPCs/characters/failedpc.tscn").instantiate() #Do not add him to the list!
+var Angel = load("res://NPCs/characters/angel.tscn").instantiate()
 
 
 func _ready():
@@ -26,7 +26,7 @@ func call_someone():
 	
 	chara = find_someone()
 	dialogue = chara.get_dialogue()
-	start_conversation(dialogue[0], dialogue[1]) #Eventuelt også portrett? Vet ikke hvordan d funker.
+	start_conversation(dialogue[0], dialogue[1]) #NPC-navn, dialog-navn. Eventuelt også portrett? Vet ikke hvordan d funker.
 	call_history.push_front(chara)
 	
 
@@ -36,9 +36,9 @@ func find_someone():
 	#Senere, lavere frekvens av FailedPC.
 	#Hvis alle er ferdige -> FailedPC
 	#Midlertidig fordi vi bare har en karakter lol:
-	return ch_FailedPC
+	return FailedPC
 
-func start_conversation(filename, dialogue):
+func start_conversation(filename, dialogue):	
 	var balloon = preload("res://Dialogue/balloon.tscn").instantiate()
 	get_tree().current_scene.add_child(balloon)
 	balloon.start(load("res://Dialogue/" + filename + ".dialogue"), dialogue)

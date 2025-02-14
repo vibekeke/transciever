@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://hldc84cgpeco"]
 
-[ext_resource type="Script" path="res://Characters/scripts/ch_angel.gd" id="1_15qr4"]
+[ext_resource type="Script" path="res://NPCs/scripts/ch_angel.gd" id="1_15qr4"]
 
 
 [node name="Angel" type="Node2D"]

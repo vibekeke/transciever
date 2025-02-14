@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://r1c0q8jp0wlt"]
+
+[ext_resource type="Script" path="res://NPCs/scripts/ch_failedpc.gd" id="1_76kxl"]
+
+[node name="FailedPC" type="Node2D"]
+script = ExtResource("1_76kxl")

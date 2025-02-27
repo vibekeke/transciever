@@ -1,14 +1,14 @@
 [gd_scene load_steps=21 format=3 uid="uid://ti4yhsbr72ul"]
 
-[ext_resource type="Texture2D" uid="uid://crhv1uak3r5b4" path="res://IMG_1177.PNG" id="1_1mlr6"]
+[ext_resource type="Texture2D" uid="uid://crhv1uak3r5b4" path="res://World/IMG_1177.PNG" id="1_1mlr6"]
 [ext_resource type="Script" path="res://main.gd" id="1_fxpxv"]
 [ext_resource type="PackedScene" uid="uid://dwcuu0xxvrd0b" path="res://UI/menu_transciever.tscn" id="3_kj77a"]
-[ext_resource type="PackedScene" uid="uid://12kyoto1s88l" path="res://island.tscn" id="3_ql5d5"]
-[ext_resource type="PackedScene" uid="uid://cbgl6rhp3h3hi" path="res://transciever.tscn" id="4_m2rnd"]
-[ext_resource type="PackedScene" uid="uid://cwigp1ltbfu73" path="res://Items and Inventory/Items/inventory_item.tscn" id="5_ooeul"]
+[ext_resource type="PackedScene" uid="uid://12kyoto1s88l" path="res://World/island.tscn" id="3_ql5d5"]
+[ext_resource type="PackedScene" uid="uid://cbgl6rhp3h3hi" path="res://World/transciever.tscn" id="4_m2rnd"]
+[ext_resource type="PackedScene" uid="uid://cwigp1ltbfu73" path="res://Inventory Items/Items/inventory_item.tscn" id="5_ooeul"]
 [ext_resource type="Script" path="res://UI/camera_2d.gd" id="6_0m2nf"]
 [ext_resource type="PackedScene" uid="uid://p8g7tpy65kip" path="res://Player/player.tscn" id="6_86dlx"]
-[ext_resource type="PackedScene" uid="uid://pg47ky8bslua" path="res://Backgrounds/univers_bakgrunn.tscn" id="6_bw3ae"]
+[ext_resource type="PackedScene" uid="uid://pg47ky8bslua" path="res://World/Backgrounds/univers_bakgrunn.tscn" id="6_bw3ae"]
 [ext_resource type="Texture2D" uid="uid://mjqr6ddklpil" path="res://Minigame/Assets/dust_green1.png" id="8_8cua2"]
 [ext_resource type="Texture2D" uid="uid://d0e6dbpwd0id4" path="res://Minigame/Assets/dust_blue2.png" id="8_textc"]
 [ext_resource type="Texture2D" uid="uid://bua8iiw6fwmcd" path="res://Minigame/Assets/dust_red3.png" id="9_en3hm"]
@@ -73,12 +73,7 @@ script = ExtResource("6_0m2nf")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TranscieverMenu" parent="CanvasLayer" instance=ExtResource("3_kj77a")]
-offset_left = 1023.0
-offset_top = 388.0
-offset_right = 1023.0
-offset_bottom = 388.0
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]

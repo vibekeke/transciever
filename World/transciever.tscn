@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbgl6rhp3h3hi"]
+
+[ext_resource type="Script" path="res://World/transciever.gd" id="1_1sefa"]
+[ext_resource type="Texture2D" uid="uid://bseofc5717o0e" path="res://UI/button_square_border.png" id="1_6iq65"]
+[ext_resource type="Texture2D" uid="uid://cb6lcxau5w608" path="res://PlaceholderArt/Radio.png" id="2_yfasd"]
+[ext_resource type="PackedScene" uid="uid://mwsjhlbqeq2m" path="res://interaction/interaction area/interaction_area.tscn" id="4_ycjyc"]
+
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3pv3h"]
+radius = 320.383
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lc5np"]
+size = Vector2(263, 268)
+
+[node name="Transciever" type="Node2D"]
+script = ExtResource("1_1sefa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -151.0
+offset_top = -306.0
+offset_right = 153.0
+offset_bottom = 1.0
+texture = ExtResource("1_6iq65")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -155)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yfasd")
+
+[node name="InteractionArea" parent="." instance=ExtResource("4_ycjyc")]
+position = Vector2(-165, -219)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(165, 35)
+shape = SubResource("CircleShape2D_3pv3h")
+
+[node name="CollisionArea" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="CollisionArea"]
+position = Vector2(4, -141)
+shape = SubResource("RectangleShape2D_lc5np")

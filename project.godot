@@ -32,8 +32,7 @@ general/balloon_path="res://Dialogue/balloon.tscn"
 
 window/size/viewport_width=1760
 window/size/viewport_height=990
-window/size/resizable=false
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 
 [editor_plugins]
 

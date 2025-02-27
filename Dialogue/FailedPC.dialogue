@@ -7,7 +7,7 @@ Old man: ..I can't hear you, you're too far away!
 - Who are you?
 	Old man: ..What!?
 - Can we be friends?
-	Old man: Ahh, err... I'm a actually a little[wait = 0.5] busy... these days. You seem like a chill person though! [wait = 1] ...I'm hanging up now!
+	Old man: Ahh, err... I'm a actually a little[wait = 0.5] busy these days. You seem like a chill person though! [wait = 1] ...I'm hanging up now!
 	Old man: *Click*
 Transciever: Call ended.
 => END

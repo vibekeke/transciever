@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bb2fa338hg0f"]
 
 [ext_resource type="Script" path="res://Minigame/starminigame.gd" id="1_6g85x"]
-[ext_resource type="PackedScene" uid="uid://dygv025u5enob" path="res://Backgrounds/univers_bakgrunn_opp.tscn" id="1_f5iaj"]
+[ext_resource type="PackedScene" uid="uid://dygv025u5enob" path="res://World/Backgrounds/univers_bakgrunn_opp.tscn" id="1_f5iaj"]
 [ext_resource type="Script" path="res://Minigame/line_2d.gd" id="2_7c84j"]
 [ext_resource type="PackedScene" uid="uid://b2eaobu4nb60v" path="res://Minigame/PlayerStar/PlayerStar.tscn" id="2_qjurt"]
 [ext_resource type="PackedScene" uid="uid://caiprjva0d7qh" path="res://Minigame/HUD/hud.tscn" id="5_gr5u4"]

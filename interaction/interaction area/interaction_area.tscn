@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://mwsjhlbqeq2m"]
+[gd_scene load_steps=5 format=3 uid="uid://mwsjhlbqeq2m"]
 
 [ext_resource type="Script" path="res://interaction/interaction area/interaction_area.gd" id="1_oey3w"]
-[ext_resource type="Texture2D" uid="uid://ds5j47af762m2" path="res://images.png" id="2_xf4xr"]
+[ext_resource type="Shader" path="res://Minigame/PlayerStar/PlayerStar.gdshader" id="2_4e7hk"]
+[ext_resource type="Texture2D" uid="uid://c5oblcycuyn0" path="res://Minigame/Assets/star_v1.png" id="2_hgykv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eqkmm"]
+shader = ExtResource("2_4e7hk")
+shader_parameter/red_intensity = 0.7
+shader_parameter/green_intensity = 0.676
+shader_parameter/blue_intensity = 0.288
 
 [node name="InteractionArea" type="Area2D"]
 collision_layer = 0
@@ -9,9 +16,10 @@ collision_mask = 2
 script = ExtResource("1_oey3w")
 
 [node name="Arrow" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_eqkmm")
 position = Vector2(0, -34)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("2_xf4xr")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_hgykv")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

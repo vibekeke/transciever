@@ -13,6 +13,8 @@ var scene_path: String = "res://Items and Inventory/Items/inventory_item.tscn"
 
 @onready var sprite = $Sprite2D
 
+#TODO: Sprites kan kanskje ende opp med litt forskjellige størrelser, så vi bør ha noen variabler til å ta høyde for det?
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if not Engine.is_editor_hint():

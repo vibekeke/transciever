@@ -61,7 +61,7 @@ position = Vector2(677, 654)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("6_86dlx")]
-position = Vector2(1026, 743)
+position = Vector2(1061.63, 824.715)
 scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -73,7 +73,6 @@ script = ExtResource("6_0m2nf")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TranscieverMenu" parent="CanvasLayer" instance=ExtResource("3_kj77a")]
-grow_vertical = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]

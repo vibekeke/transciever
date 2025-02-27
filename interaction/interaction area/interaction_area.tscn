@@ -1,11 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://mwsjhlbqeq2m"]
+[gd_scene load_steps=3 format=3 uid="uid://mwsjhlbqeq2m"]
 
 [ext_resource type="Script" path="res://interaction/interaction area/interaction_area.gd" id="1_oey3w"]
+[ext_resource type="Texture2D" uid="uid://ds5j47af762m2" path="res://images.png" id="2_xf4xr"]
 
 [node name="InteractionArea" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_oey3w")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(0, -34)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_xf4xr")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

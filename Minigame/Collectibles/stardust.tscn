@@ -1,7 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://buync7yj37bpn"]
 
 [ext_resource type="Script" path="res://Minigame/Collectibles/stardust.gd" id="1_ad0e6"]
-[ext_resource type="Texture2D" uid="uid://ds5j47af762m2" path="res://Minigame/Assets/images.png" id="2_xg2qc"]
+[ext_resource type="Texture2D" uid="uid://ds5j47af762m2" path="res://images.png" id="2_xg2qc"]
+
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wy6oh"]
 animations = [{

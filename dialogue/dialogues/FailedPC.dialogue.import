@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://r2rqfdd78gor"
+path="res://.godot/imported/FailedPC.dialogue-44be0a9b0ba71a3e49b3c666b9c2cc85.tres"
+
+[deps]
+
+source_file="res://dialogue/dialogues/FailedPC.dialogue"
+dest_files=["res://.godot/imported/FailedPC.dialogue-44be0a9b0ba71a3e49b3c666b9c2cc85.tres"]
+
+[params]
+
+defaults=true

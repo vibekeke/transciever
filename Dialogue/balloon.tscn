@@ -1,12 +1,12 @@
 [gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
-[ext_resource type="Script" path="res://Dialogue/balloon.gd" id="1_36de5"]
+[ext_resource type="Script" path="res://dialogue/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="StyleBox" uid="uid://b376nq15rqjyl" path="res://UI/Themes and Styles/test_dialoguebox.tres" id="2_hy185"]
+[ext_resource type="StyleBox" uid="uid://b376nq15rqjyl" path="res://assets/ui/themes/test_dialoguebox.tres" id="2_hy185"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
-[ext_resource type="FontFile" uid="uid://bfa1e3blb0s3u" path="res://UI/Fonts/KantumruyPro-Light.ttf" id="3_b7mfy"]
-[ext_resource type="FontFile" uid="uid://bto506awlpcc5" path="res://UI/Fonts/KantumruyPro-ExtraLightItalic.ttf" id="6_gd2du"]
-[ext_resource type="FontFile" uid="uid://c58fyu7hroa0p" path="res://UI/Fonts/KantumruyPro-Italic.ttf" id="7_gdq3h"]
+[ext_resource type="FontFile" uid="uid://bfa1e3blb0s3u" path="res://assets/ui/fonts/KantumruyPro-Light.ttf" id="3_b7mfy"]
+[ext_resource type="FontFile" uid="uid://bto506awlpcc5" path="res://assets/ui/fonts/KantumruyPro-ExtraLightItalic.ttf" id="6_gd2du"]
+[ext_resource type="FontFile" uid="uid://c58fyu7hroa0p" path="res://assets/ui/fonts/KantumruyPro-Italic.ttf" id="7_gdq3h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)

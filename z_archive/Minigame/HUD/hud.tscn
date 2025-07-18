@@ -1,0 +1,34 @@
+[gd_scene load_steps=2 format=3 uid="uid://caiprjva0d7qh"]
+
+[ext_resource type="Script" path="res://z_archive/Minigame/HUD/hud.gd" id="1_s08xu"]
+
+
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_s08xu")
+
+[node name="Dust" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "RedDust: "
+
+[node name="BlueDustLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 31.0
+offset_right = 75.0
+offset_bottom = 54.0
+text = "BlueDust: "
+
+[node name="GreenDustLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 61.0
+offset_right = 75.0
+offset_bottom = 84.0
+text = "GreenDust: "
